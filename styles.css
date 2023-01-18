@@ -153,10 +153,11 @@ main {
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    border: 2px solid var(--blue-gray-12);
+    /* border: 2px solid var(--blue-gray-12); */
     /* overflow: hidden; */
     -webkit-box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.63); 
     box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.63);
+    backdrop-filter: blur(2px);
 }
 
 .game-container-started {
