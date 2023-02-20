@@ -246,7 +246,7 @@ main {
     background: var(--blue-gray-11);
 }
 
-.status-message {
+.end-container {
     position: absolute;
 }
 
@@ -256,6 +256,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 20px;
     height: 100%;
     width: 100%;
     background: #182931eb;

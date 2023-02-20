@@ -6,6 +6,7 @@ var restartBtn = document.querySelector('.restart-btn');
 var currentQuestion = document.querySelector('.current-question');
 var answerBtns = document.querySelectorAll('.answer-btn');
 var statusMessage = document.querySelector('.status-message');
+var endContainer = document.querySelector('.end-container');
 var score = document.querySelector('.score');
 var progressImg = document.querySelector('.progress-img');
 // var helpBtn = document.querySelector('.help-btn');
@@ -25,7 +26,7 @@ var nextLevel = function(){
         roundNumber++;
         score.innerText = "Round " + roundNumber + '/' + roundsArray.length;
         statusMessage.innerText = '';
-        statusMessage.classList.remove('game-over');
+        endContainer.classList.remove('game-over');
         randomQuestion = remainingRounds[Math.floor(Math.random()*remainingRounds.length)];
         currentQuestion.innerText = randomQuestion.question;
         currentQuestion.classList.add('fade-in');
@@ -90,7 +91,10 @@ var checkAnswer = function(){
 
 var gameOver = function(){
     statusMessage.innerText = 'Game Over';
-    window.setTimeout(function(){statusMessage.classList.add('game-over')}, 500);
+    window.setTimeout(function(){
+        endContainer.classList.add('game-over'); 
+        restartBtn.style.display = 'block';
+    }, 500);
     localStorage.setItem('lastScore', roundNumber);
 }
 
@@ -111,12 +115,12 @@ var startGame = function(){
     started = true;
     if(started = true) {
         playBtn.style.display = 'none';
-        restartBtn.style.display = 'block';
         nextLevel();
     }
 }
 
 var restartGame = function(){
+    restartBtn.style.display = 'none';
     remainingRounds = [...roundsArray];
     roundNumber = 0;
     clearLevel();
