@@ -31,6 +31,7 @@
 body {
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
     background: var(--blue-gray-12);
     font-family: 'Montserrat', sans-serif;
     font-family: 'Source Sans Pro', sans-serif;
