@@ -46,13 +46,13 @@ var nextLevel = function(){
 
         if(roundNumber == 1) {
             progressImg.style.backgroundImage = game.progressTree.imageSrc1;
-        } else if(roundNumber == 2){
+        } else if(roundNumber == 4){
             progressImg.style.backgroundImage = game.progressTree.imageSrc2;
-        } else if(roundNumber == 3) {
+        } else if(roundNumber == 7) {
             progressImg.style.backgroundImage = game.progressTree.imageSrc3;
-        } else if(roundNumber == 4) {
+        } else if(roundNumber == 10) {
             progressImg.style.backgroundImage = game.progressTree.imageSrc4;
-        } else if(roundNumber == 5) {
+        } else if(roundNumber == 13) {
             progressImg.style.backgroundImage = game.progressTree.imageSrc5;
         }
 
