@@ -91,27 +91,29 @@ body {
 
 .help-module {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
     background: var(--darkgreen);
     padding: 10px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    position: absolute;
-    right: 0;
+    /* border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px; */
+    position: relative;
+    /* right: 0;
     top: 50%;
-    transform: translate(0, -50%);
+    transform: translate(0, -50%); */
     z-index: 1;
     /* animation: slide-in-from-left 1s linear forwards; */
 }
 
-.show-help-module {
+/* .show-help-module {
     animation: slide-in-from-left 0.5s linear forwards;
-}
+} */
 
 .help-module span {
     font-size: 14px;
     padding: 5px 10px;
     cursor: pointer;
+    border: 2px solid transparent;
 }
 
 .help-module span:hover {
@@ -119,8 +121,8 @@ body {
 }
 
 .help-module span:nth-child(2) {
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
 }
 
 main {
@@ -166,13 +168,11 @@ main {
 
 .question-container {
     width: 100%;
-    height: 40%;
+    height: 30%;
     border-bottom: 2px solid var(--blue-gray-10);
     background: var(--blue-gray-9);
     display: flex;
     justify-content: center;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
 }
 
 .current-question {
@@ -189,7 +189,7 @@ main {
 
 .answers-container {
     width: 100%;
-    height: 30%;
+    height: 35%;
     border-top: 2px solid var(--blue-gray-12);
     background: var(--blue-gray-11);
     display: flex;
@@ -209,6 +209,9 @@ main {
     width: 45%;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.82);
     text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .progress-container {
@@ -219,6 +222,7 @@ main {
     position: relative;
     flex-grow: 1;
     display: flex;
+    flex-direction: column;
     /* justify-content: center;
     align-items: center; */
     /* align-content: center;
@@ -235,10 +239,23 @@ main {
     align-items: center;
     z-index: 2;
     background: #333;
+    background: var(--blue-gray-11);
 }
 
 .status-message {
     position: absolute;
+}
+
+.game-over {
+    color: #fff;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background: #182931eb;
+    z-index: 3;
 }
 
 .score {
@@ -316,4 +333,34 @@ main {
 @keyframes slide-in-from-left {
     0% {transform: translate(-100%, -50%)}
     100% {transform: translate(100%, -50%)}
+}
+
+@media screen and (max-width: 400px) {
+    .game-container {
+        width: 90%;
+    }
+
+    .btn {
+        padding: 10px;
+    }
+
+    .btn:hover {
+        background: var(--blue-gray-9);
+    }
+
+    .btn:active {
+        background: initial;
+    }
+
+    .answer-btn {
+        font-size: 16px;
+    }
+    
+    .answer-btn:active{
+        background: initial;
+    }
+
+    .current-question {
+        font-size: 17px;
+    }
 }

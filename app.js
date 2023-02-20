@@ -8,8 +8,8 @@ var answerBtns = document.querySelectorAll('.answer-btn');
 var statusMessage = document.querySelector('.status-message');
 var score = document.querySelector('.score');
 var progressImg = document.querySelector('.progress-img');
-var helpBtn = document.querySelector('.help-btn');
-var helpModule = document.querySelector('.help-module');
+// var helpBtn = document.querySelector('.help-btn');
+// var helpModule = document.querySelector('.help-module');
 var randomQuestion; 
 var roundNumber = 0;
 var started = false;
@@ -25,6 +25,7 @@ var nextLevel = function(){
         roundNumber++;
         score.innerText = "Round " + roundNumber + '/' + roundsArray.length;
         statusMessage.innerText = '';
+        statusMessage.classList.remove('game-over')
         randomQuestion = remainingRounds[Math.floor(Math.random()*remainingRounds.length)];
         currentQuestion.innerText = randomQuestion.question;
 
@@ -86,6 +87,7 @@ var checkAnswer = function(){
 
 var gameOver = function(){
     statusMessage.innerText = 'Game Over';
+    window.setTimeout(function(){statusMessage.classList.add('game-over')}, 500);
     localStorage.setItem('lastScore', roundNumber);
 }
 
@@ -119,21 +121,21 @@ var restartGame = function(){
     getLastScore();
 }
 
-helpBtn.addEventListener('mouseover', function(){
-    helpModule.classList.add('show-help-module');
-})
+// helpBtn.addEventListener('mouseover', function(){
+//     helpModule.classList.add('show-help-module');
+// })
 
-helpModule.addEventListener('mouseover', function(){
-    helpModule.classList.add('show-help-module');
-})
+// helpModule.addEventListener('mouseover', function(){
+//     helpModule.classList.add('show-help-module');
+// })
 
-helpBtn.addEventListener('mouseout', function(){
-    helpModule.classList.remove('show-help-module');
-})
+// helpBtn.addEventListener('mouseout', function(){
+//     helpModule.classList.remove('show-help-module');
+// })
 
-helpModule.addEventListener('mouseout', function(){
-    helpModule.classList.remove('show-help-module');
-})
+// helpModule.addEventListener('mouseout', function(){
+//     helpModule.classList.remove('show-help-module');
+// })
 
 //variante ajutor
 //50/50
@@ -148,10 +150,10 @@ var fiftyFifty = function(){
 helpFifty.addEventListener('click', fiftyFifty);
 
 //call friend
-helpCall.addEventListener('click', function(){
-    console.log('call friend');
-    helpCall.classList.add('blocked-btn');
-})
+// helpCall.addEventListener('click', function(){
+//     console.log('call friend');
+//     helpCall.classList.add('blocked-btn');
+// })
 
 playBtn.addEventListener('click', startGame);
 restartBtn.addEventListener('click', restartGame);
