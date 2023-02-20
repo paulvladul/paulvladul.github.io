@@ -25,9 +25,10 @@ var nextLevel = function(){
         roundNumber++;
         score.innerText = "Round " + roundNumber + '/' + roundsArray.length;
         statusMessage.innerText = '';
-        statusMessage.classList.remove('game-over')
+        statusMessage.classList.remove('game-over');
         randomQuestion = remainingRounds[Math.floor(Math.random()*remainingRounds.length)];
         currentQuestion.innerText = randomQuestion.question;
+        currentQuestion.classList.add('fade-in');
 
         for (var i = 0; i < answerBtns.length; i++) {
             answersArr = randomQuestion.answers;
@@ -76,6 +77,7 @@ var checkAnswer = function(){
     })
     if(this.getAttribute('data-correct') == "true") {
         this.classList.add('correct-answer-btn');
+        currentQuestion.classList.remove('fade-in');
         clearLevel();
         window.setTimeout(nextLevel, 500);
     } else {

@@ -94,7 +94,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     background: var(--darkgreen);
-    padding: 10px;
+    padding: 0 10px;
     /* border-top-right-radius: 5px;
     border-bottom-right-radius: 5px; */
     position: relative;
@@ -111,7 +111,7 @@ body {
 
 .help-module span {
     font-size: 14px;
-    padding: 5px 10px;
+    padding: 5px 20px;
     cursor: pointer;
     border: 2px solid transparent;
 }
@@ -183,6 +183,9 @@ main {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.82);
     max-width: 80%;
     text-align: center;
+}
+
+.fade-in {
     animation: fade-in 0.5s linear forwards;
 }
 
@@ -212,6 +215,7 @@ main {
     align-items: center;
     justify-content: center;
     padding: 10px;
+    background: var(--blue-gray-9);
 }
 
 .progress-container {
@@ -352,12 +356,20 @@ main {
         background: initial;
     }
 
+    .help-module span {
+        padding: 10px;
+    }
+
     .answer-btn {
         font-size: 16px;
     }
     
     .answer-btn:active{
-        background: initial;
+        color: #fff;
+    }
+
+    .correct-answer-btn {
+        color: #fff;
     }
 
     .current-question {
