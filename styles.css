@@ -133,7 +133,7 @@ main {
 
 .game-controls {
     background: #444;
-    max-width: 300px;
+    max-width: 150px;
     text-align: center;
     margin: auto;
     padding: 20px;
@@ -146,8 +146,7 @@ main {
 }
 
 .game-container {
-    width: 80%;
-    max-width: 650px;
+    max-width: 600px;
     height: 500px;
     margin: 50px auto;
     background: rgb(40, 41, 41);
@@ -212,6 +211,7 @@ main {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    padding: 10px;
 }
 
 .progress-container {
