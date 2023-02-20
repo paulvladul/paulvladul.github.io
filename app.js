@@ -38,6 +38,7 @@ var nextLevel = function(){
             answerBtns[i].setAttribute('data-correct', answersArr[i].correct);
 
             answerBtns[i].addEventListener('click', checkAnswer);
+            answerBtns[i].addEventListener('touchstart', checkAnswer);
         }
 
         questionIndex = remainingRounds.indexOf(randomQuestion);
