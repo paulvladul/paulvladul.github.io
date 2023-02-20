@@ -65,6 +65,10 @@ body {
     background: rgb(38, 67, 82);
 }
 
+.play-btn {
+    width: 100%;
+}
+
 .restart-btn {
     display: none;
 }
@@ -136,7 +140,6 @@ main {
     max-width: 150px;
     text-align: center;
     margin: auto;
-    padding: 20px;
     border-radius: 10px;
     -webkit-box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.63); 
     box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.63);
