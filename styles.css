@@ -71,6 +71,8 @@ body {
 }
 
 .restart-btn {
+    background: var(--blue-gray-12);
+    border: 1px solid var(--blue-gray-12);
     display: none;
 }
 
@@ -251,6 +253,7 @@ main {
 }
 
 .end-container {
+    display: none;
     position: absolute;
 }
 
@@ -266,6 +269,14 @@ main {
     width: 100%;
     background: #182931eb;
     z-index: 3;
+}
+
+.status-message {
+    font-size: 35px;
+}
+
+.final-score {
+    font-size: 23px;
 }
 
 .score {

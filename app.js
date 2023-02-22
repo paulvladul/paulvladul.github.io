@@ -9,8 +9,6 @@ var statusMessage = document.querySelector('.status-message');
 var endContainer = document.querySelector('.end-container');
 var score = document.querySelector('.score');
 var progressImg = document.querySelector('.progress-img');
-// var helpBtn = document.querySelector('.help-btn');
-// var helpModule = document.querySelector('.help-module');
 var randomQuestion; 
 var roundNumber = 0;
 var started = false;
@@ -90,7 +88,9 @@ var checkAnswer = function(){
 }
 
 var gameOver = function(){
+    var finalScore = document.querySelector('.final-score');
     statusMessage.innerText = 'Game Over';
+    finalScore.innerText = 'Your score: ' + roundNumber;
     window.setTimeout(function(){
         endContainer.classList.add('game-over'); 
         restartBtn.style.display = 'block';
@@ -126,23 +126,8 @@ var restartGame = function(){
     clearLevel();
     nextLevel();
     getLastScore();
+    helpFifty.classList.remove('blocked-btn');
 }
-
-// helpBtn.addEventListener('mouseover', function(){
-//     helpModule.classList.add('show-help-module');
-// })
-
-// helpModule.addEventListener('mouseover', function(){
-//     helpModule.classList.add('show-help-module');
-// })
-
-// helpBtn.addEventListener('mouseout', function(){
-//     helpModule.classList.remove('show-help-module');
-// })
-
-// helpModule.addEventListener('mouseout', function(){
-//     helpModule.classList.remove('show-help-module');
-// })
 
 //variante ajutor
 //50/50

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Stoma</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            html {
+                width: 100%;
+                height: 100%;
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                background: #fff;
+                height: 100vh;
+            }
+
+            .recording {
+                width: 100%;
+                min-height: 100px;
+                background: rgb(43, 43, 70);
+                color: #fff;
+                font-size: 30px;
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="recording sunt-bine">Sunt bine
+                <audio class="sunt-bine-audio" src="inregistrari/suntbine.mp3"></audio>
+            </div>
+            <div class="recording ma-doare">Ma doare
+                <audio class="ma-doare-audio" src="inregistrari/madoare.mp3"></audio>
+            </div>
+            
+            <div class="recording">Ha Ha</div>
+            <div class="recording">Ce urmeaza?</div>
+            <div class="recording">Cat dureaza?</div>
+            <div class="recording">Cand?</div>
+            <div class="recording">O sa doara?</div>
+            <div class="recording">Fara emotii</div>
+        </div>
+        <script>
+            var suntBine = document.querySelector('.sunt-bine');
+            var suntBineAudio = document.querySelector('.sunt-bine-audio');
+            var maDoare = document.querySelector('.ma-doare');
+            var maDoareAudio = document.querySelector('.ma-doare-audio');
+
+            suntBine.addEventListener('click', function(){
+                suntBineAudio.play();
+            })
+
+            
+            maDoare.addEventListener('click', function(){
+                maDoareAudio.play();
+            })
+        </script>
+    </body>
+</html>
