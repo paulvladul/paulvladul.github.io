@@ -47,27 +47,80 @@
             <div class="recording ma-doare">Ma doare
                 <audio class="ma-doare-audio" src="inregistrari/madoare.mp3"></audio>
             </div>
-            
-            <div class="recording">Ha Ha</div>
-            <div class="recording">Ce urmeaza?</div>
-            <div class="recording">Cat dureaza?</div>
-            <div class="recording">Cand?</div>
-            <div class="recording">O sa doara?</div>
-            <div class="recording">Fara emotii</div>
+            <div class="recording ha-ha">Ha Ha
+                <audio class="ha-ha-audio" src="inregistrari/haha.mp3"></audio>
+            </div>
+            <div class="recording ce-urmeaza">Ce urmeaza?
+                <audio class="ce-urmeaza-audio" src="inregistrari/ceurmeaza.mp3"></audio>
+            </div>
+            <div class="recording cat-dureaza">Cat dureaza?
+                <audio class="cat-dureaza-audio" src="inregistrari/catdureaza.mp3"></audio>
+            </div>
+            <div class="recording aoleu">Aoleu
+                <audio class="aoleu-audio" src="inregistrari/aoleu.mp3"></audio>
+            </div>
+            <div class="recording o-sa-doara">O sa doara?
+                <audio class="o-sa-doara-audio" src="inregistrari/catderau.mp3"></audio>
+            </div>
+            <div class="recording fara-emotii">Fara emotii
+                <audio class="fara-emotii-audio" src="inregistrari/faraemotii.mp3"></audio>
+            </div>
         </div>
         <script>
             var suntBine = document.querySelector('.sunt-bine');
             var suntBineAudio = document.querySelector('.sunt-bine-audio');
+
             var maDoare = document.querySelector('.ma-doare');
             var maDoareAudio = document.querySelector('.ma-doare-audio');
+
+            var haHa = document.querySelector('.ha-ha')
+            var haHaAudio = document.querySelector('.ha-ha-audio');
+            
+            var ceUrmeaza = document.querySelector('.ce-urmeaza')
+            var ceUrmeazaaAudio = document.querySelector('.ce-urmeaza-audio');
+            
+            var catDureaza = document.querySelector('.cat-dureaza')
+            var catDureazaAudio = document.querySelector('.cat-dureaza-audio');
+            
+            var aoleu = document.querySelector('.aoleu')
+            var aoleuAudio = document.querySelector('.aoleu-audio');
+            
+            var oSaDoara = document.querySelector('.o-sa-doara')
+            var oSaDoaraAudio = document.querySelector('.o-sa-doara-audio');
+            
+            var faraEmotii = document.querySelector('.fara-emotii')
+            var faraEmotiiAudio = document.querySelector('.fara-emotii-audio');
 
             suntBine.addEventListener('click', function(){
                 suntBineAudio.play();
             })
-
             
             maDoare.addEventListener('click', function(){
                 maDoareAudio.play();
+            })
+
+            haHa.addEventListener('click', function(){
+                haHaAudio.play();
+            })
+
+            ceUrmeaza.addEventListener('click', function(){
+                ceUrmeazaaAudio.play();
+            })
+
+            catDureaza.addEventListener('click', function(){
+                catDureazaAudio.play();
+            })
+
+            aoleu.addEventListener('click', function(){
+                aoleuAudio.play();
+            })
+
+            oSaDoara.addEventListener('click', function(){
+                oSaDoaraAudio.play();
+            })
+
+            faraEmotii.addEventListener('click', function(){
+                faraEmotiiAudio.play();
             })
         </script>
     </body>
