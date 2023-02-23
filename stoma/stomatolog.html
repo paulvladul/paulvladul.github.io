@@ -37,6 +37,10 @@
                 align-items: center;
                 border: 1px solid #ccc;
             }
+
+            .active {
+                background: green;
+            }
         </style>
     </head>
     <body>
@@ -92,36 +96,59 @@
             var faraEmotiiAudio = document.querySelector('.fara-emotii-audio');
 
             suntBine.addEventListener('click', function(){
+                resetBg();
                 suntBineAudio.play();
+                this.classList.add('active');
             })
             
             maDoare.addEventListener('click', function(){
+                resetBg();
                 maDoareAudio.play();
+                this.classList.add('active');
             })
 
             haHa.addEventListener('click', function(){
+                resetBg();
                 haHaAudio.play();
+                this.classList.add('active');
             })
 
             ceUrmeaza.addEventListener('click', function(){
+                resetBg();
                 ceUrmeazaaAudio.play();
+                this.classList.add('active');
             })
 
             catDureaza.addEventListener('click', function(){
+                resetBg();
                 catDureazaAudio.play();
+                this.classList.add('active');
             })
 
             aoleu.addEventListener('click', function(){
+                resetBg();
                 aoleuAudio.play();
+                this.classList.add('active');
             })
 
             oSaDoara.addEventListener('click', function(){
+                resetBg();
                 oSaDoaraAudio.play();
+                this.classList.add('active');
             })
 
             faraEmotii.addEventListener('click', function(){
+                resetBg();
                 faraEmotiiAudio.play();
+                this.classList.add('active');
             })
+
+            var resetBg = function(){
+                var recordings = document.querySelectorAll('.recording');
+                recordings.forEach(function(recording){
+                    recording.classList.remove('active');
+                })
+            }
         </script>
     </body>
 </html>
