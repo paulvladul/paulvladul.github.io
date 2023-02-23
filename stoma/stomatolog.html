@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
         <style>
-            *{
+            * {
                 padding: 0;
                 margin: 0;
                 box-sizing: border-box;
@@ -28,18 +28,19 @@
             .recording {
                 width: 100%;
                 min-height: 100px;
-                background: rgb(43, 43, 70);
+                background-color: rgb(43, 43, 70);
                 color: #fff;
                 font-size: 25px;
                 font-weight: bold;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                border: 1px solid #ccc;
+                border: 2px solid #ccc;
+                transition: 0.5s ease forwards;
             }
 
             .active {
-                background: green;
+                background-color: rgb(12, 99, 12);
             }
         </style>
     </head>
@@ -71,81 +72,22 @@
             </div>
         </div>
         <script>
-            var suntBine = document.querySelector('.sunt-bine');
-            var suntBineAudio = document.querySelector('.sunt-bine-audio');
+            var buttons = Array.prototype.slice.call(document.querySelectorAll('.recording'));
+            var sounds = Array.prototype.slice.call(document.querySelectorAll('.recording audio'));
 
-            var maDoare = document.querySelector('.ma-doare');
-            var maDoareAudio = document.querySelector('.ma-doare-audio');
-
-            var haHa = document.querySelector('.ha-ha')
-            var haHaAudio = document.querySelector('.ha-ha-audio');
-            
-            var ceUrmeaza = document.querySelector('.ce-urmeaza')
-            var ceUrmeazaaAudio = document.querySelector('.ce-urmeaza-audio');
-            
-            var catDureaza = document.querySelector('.cat-dureaza')
-            var catDureazaAudio = document.querySelector('.cat-dureaza-audio');
-            
-            var aoleu = document.querySelector('.aoleu')
-            var aoleuAudio = document.querySelector('.aoleu-audio');
-            
-            var oSaDoara = document.querySelector('.o-sa-doara')
-            var oSaDoaraAudio = document.querySelector('.o-sa-doara-audio');
-            
-            var faraEmotii = document.querySelector('.fara-emotii')
-            var faraEmotiiAudio = document.querySelector('.fara-emotii-audio');
-
-            suntBine.addEventListener('click', function(){
-                resetBg();
-                suntBineAudio.play();
-                this.classList.add('active');
-            })
-            
-            maDoare.addEventListener('click', function(){
-                resetBg();
-                maDoareAudio.play();
-                this.classList.add('active');
-            })
-
-            haHa.addEventListener('click', function(){
-                resetBg();
-                haHaAudio.play();
-                this.classList.add('active');
-            })
-
-            ceUrmeaza.addEventListener('click', function(){
-                resetBg();
-                ceUrmeazaaAudio.play();
-                this.classList.add('active');
-            })
-
-            catDureaza.addEventListener('click', function(){
-                resetBg();
-                catDureazaAudio.play();
-                this.classList.add('active');
-            })
-
-            aoleu.addEventListener('click', function(){
-                resetBg();
-                aoleuAudio.play();
-                this.classList.add('active');
-            })
-
-            oSaDoara.addEventListener('click', function(){
-                resetBg();
-                oSaDoaraAudio.play();
-                this.classList.add('active');
-            })
-
-            faraEmotii.addEventListener('click', function(){
-                resetBg();
-                faraEmotiiAudio.play();
-                this.classList.add('active');
+            buttons.forEach(function(button){
+                button.addEventListener('click', function(){
+                    resetBg();
+                    for(var i=0;i<sounds.length;i++){
+                        sounds[buttons.indexOf(button)].play();
+                    }
+                    button.classList.add('active');
+                })
             })
 
             var resetBg = function(){
-                var recordings = document.querySelectorAll('.recording');
-                recordings.forEach(function(recording){
+                var buttons = document.querySelectorAll('.recording');
+                buttons.forEach(function(recording){
                     recording.classList.remove('active');
                 })
             }
