@@ -62,6 +62,7 @@
   main {
     width: 100%;
     display: grid;
+    grid-template-rows: 1fr 7fr;
 /*     flex-direction: row; 
     flex-wrap: wrap; */
   }
@@ -79,7 +80,7 @@
     text-align: center;
   }
 
-@media(hover: hover) {
+@media only screen and (min-width: 480px) {
   .btn:hover {
     color: #f76d57;
     background: #252532;
