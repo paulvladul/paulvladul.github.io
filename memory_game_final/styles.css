@@ -97,7 +97,8 @@
   }
 
   .game-controls-container {
-    min-width: 476px;
+/*     min-width: 476px; */
+    width: 100%;
     height: auto;
     margin: 30px auto;
     background: #384f62;
