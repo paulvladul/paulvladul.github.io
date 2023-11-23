@@ -79,10 +79,12 @@
     text-align: center;
   }
 
+@media(hover: hover) {
   .btn:hover {
     color: #f76d57;
     background: #252532;
   }
+}
 
   .btn:focus {
     transform: scale(0.97);
