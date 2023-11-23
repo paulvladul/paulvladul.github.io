@@ -81,6 +81,10 @@
   }
 
 @media only screen and (min-width: 480px) {
+  .game-controls-container {
+    max-width: 500px;
+  }
+	
   .btn:hover {
     color: #f76d57;
     background: #252532;
